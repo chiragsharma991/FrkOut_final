@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".LoginActivity">
+
+
+    <item
+        android:id="@+id/action_chatting"
+        android:title="@string/action_chatting"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_testing"
+        android:title="@string/action_testing"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_broadcasting"
+        android:title="@string/action_broadcasting"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_surveys"
+        android:title="@string/action_surveys"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+</menu>

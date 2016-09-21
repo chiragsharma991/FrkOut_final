@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:scrollbars="none">
+    - <!-- android:background="@color/white"
+  -->
+     <RelativeLayout android:layout_width="match_parent" android:layout_height="230dp">
+     <RelativeLayout android:id="@+id/rlDash" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:gravity="center_vertical">
+     <RelativeLayout android:id="@+id/rlDashFbBrand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_alignParentRight="true" android:clickable="true" android:background="@drawable/bg_dashboard_layout">
+     <RelativeLayout android:id="@+id/rlDashFb" android:layout_width="wrap_content" android:layout_height="wrap_content"><TextView android:id="@+id/txtDashUser" android:layout_width="100dp" android:layout_height="30dp" android:layout_alignParentLeft="true" android:text="user" android:textSize="18dp" android:textColor="@color/blue_semi_transparent" />
+    <TextView android:id="@+id/txtDashFbDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:layout_alignParentRight="true" android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" android:textSize="15dp" android:text="hh:mm" />
+    <TextView android:id="@+id/txtDashFb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="@android:style/TextAppearance.Medium" android:maxLines="5" android:text="Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title Title" android:background="#ffffff" android:layout_below="@+id/txtDashFbDate" />
+    <ImageView android:id="@+id/ivDashFb" android:layout_width="wrap_content" android:layout_height="300dp" android:layout_below="@id/txtDashFb" android:layout_margin="10dp" android:scaleType="fitXY" android:visibility="gone" />
+</RelativeLayout>
+     <RelativeLayout android:id="@+id/rlDashBrand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/rlDashFb" android:visibility="visible" android:layout_marginBottom="5dp" android:layout_alignRight="@+id/rlDashFb" android:layout_alignEnd="@+id/rlDashFb" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:background="#ffffff">
+     <RelativeLayout android:id="@+id/rlDashBrandImg" android:layout_width="70dp" android:layout_height="70dp" android:padding="5dp">
+    <ImageView android:id="@+id/ivDashBrand" android:layout_width="65dp" android:layout_height="65dp" android:scaleType="fitXY" />
+    <TextView android:id="@+id/txtDashBrandImg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:textColor="@color/white_dark" android:textSize="25dp" />
+</RelativeLayout>
+     <RelativeLayout android:id="@+id/llDashBrand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_centerVertical="true" android:paddingLeft="5dp" android:layout_toRightOf="@+id/rlDashBrandImg">
+    <TextView android:id="@+id/txtDashBrand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:textColor="@color/brand_colour" android:textSize="15dp" android:textStyle="bold" android:text="Domino's Pizza" />
+    <TextView android:id="@+id/txtDashCat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="@android:style/TextAppearance.Small" android:text="Brand -" android:textSize="15dp" android:layout_below="@+id/txtDashBrand" />
+    <ImageView android:id="@+id/ivDashBrandComment" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="2dp" android:layout_gravity="center_horizontal" android:layout_below="@+id/txtDashBrand" android:layout_toRightOf="@+id/txtDashCat" android:layout_toEndOf="@+id/txtDashCat" android:src="@mipmap/chaticon" />
+    <TextView android:id="@+id/txtDashBrandReview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="@android:style/TextAppearance.Small" android:text="120 (Reviews)" android:textSize="15dp" android:layout_alignTop="@+id/ivDashBrandComment" android:layout_toRightOf="@+id/ivDashBrandComment" android:layout_toEndOf="@+id/ivDashBrandComment" />
+</RelativeLayout>
+     <LinearLayout android:id="@+id/llDashDislike" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_toLeftOf="@+id/llDashLike" android:layout_toStartOf="@+id/llDashLike">
+    <Button android:layout_width="40dp" android:layout_height="40dp" android:id="@+id/btnDislike" android:background="@mipmap/downhand" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtDashNoCount" android:text="65" android:layout_below="@+id/btnDislike" />
+</LinearLayout>
+     <LinearLayout android:id="@+id/llDashLike" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginLeft="5dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+    <Button android:layout_width="40dp" android:layout_height="40dp" android:id="@+id/btnLike" android:background="@mipmap/uphand" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtDashYesCount" android:text="35" android:layout_below="@+id/btnLike" />
+</LinearLayout>
+</RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>
+</ScrollView>

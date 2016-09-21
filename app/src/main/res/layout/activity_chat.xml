@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/svchat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlchat_box">
+
+        <RelativeLayout
+            android:id="@+id/rlchatMsg"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/rlImgChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+        </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlchat_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true">
+
+        <EditText android:id="@+id/chat_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="@string/chat_msg_hint"
+            android:textColorHint="@color/black_light"
+            android:maxLines="6"
+            android:layout_toLeftOf="@+id/sendbtn">
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/sendbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:onClick="ChatSend"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_button_circle_theme"
+            android:src="@mipmap/send">
+        </ImageButton>
+
+    </RelativeLayout>
+</RelativeLayout>

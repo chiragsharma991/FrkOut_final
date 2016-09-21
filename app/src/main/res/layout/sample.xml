@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlFB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtFBTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/fb_title"/>
+
+            <EditText
+                android:id="@+id/etxtFBDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtFBTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:gravity="top|left"
+                android:inputType="textMultiLine|textAutoComplete"
+                android:minLines="6"
+                android:maxLines="6"
+                android:imeOptions="actionDone"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:hint="@string/fb_desc_hint"
+                android:background="@drawable/border_common"/>
+
+            <ImageButton
+                android:id="@+id/imgFBDescEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_alignBottom="@+id/etxtFBDesc"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:padding="20dp"
+                android:background="@android:drawable/ic_menu_edit"
+                android:scaleType="centerCrop"/>
+
+            <ImageButton
+                android:id="@+id/imgFBMic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etxtFBDesc"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:scaleType="centerCrop"/>
+
+            <Button
+                android:id="@+id/btnFBDescDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgFBMic"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="10dp"
+                android:text="@string/done"
+                android:layout_centerHorizontal="true"
+                android:textColor="#f8fdf9"
+                android:background="@drawable/bg_button_semi_rounded"/>
+
+            <RelativeLayout
+                android:id="@+id/rlFBMedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnFBDescDone"
+                android:layout_marginBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/imgFBMediaNo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_button_circle_red"
+                    android:layout_marginLeft="-40dp"
+                    android:src="@mipmap/no"
+                    android:paddingLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/txtFBMediaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/fb_media_title"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgFBMediaNo"
+                    android:layout_toLeftOf="@+id/imgFBMediaYes" />
+
+                <ImageButton
+                    android:id="@+id/imgFBMediaYes"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_button_circle_green"
+                    android:layout_marginRight="-40dp"
+                    android:src="@mipmap/yes"
+                    android:paddingRight="20dp" />
+
+
+            </RelativeLayout>
+
+
+            <HorizontalScrollView
+                android:id="@+id/hSVFBAddMediaTray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlFBMedia">
+
+                <LinearLayout
+                    android:id="@+id/llFBAddMediaTray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/imgFBAddMediaImg1"
+                            android:layout_width="88dp"
+                            android:layout_height="88dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:background="@mipmap/ic_launcher1" />
+
+                        <!--<ImageButton-->
+                            <!--android:id="@+id/imgFBAddMediaImg2"-->
+                            <!--android:layout_width="24dp"-->
+                            <!--android:layout_height="24dp"-->
+                            <!--android:scaleType="fitXY"-->
+                            <!--android:background="@mipmap/close_black"-->
+                            <!--android:layout_alignParentTop="true"-->
+                            <!--android:layout_alignRight="@+id/imgFBAddMediaImg1" />-->
+
+
+                        <Button
+                            android:id ="@+id/push_button"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="@string/close"
+                            android:background="@drawable/round_button"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignRight="@+id/imgFBAddMediaImg1"
+                            />
+
+                    </RelativeLayout>
+                    <!--
+                                        <ImageButton
+                                            android:id="@+id/imgFBAddMediaImg1"
+                                            android:layout_width="88dp"
+                                            android:layout_height="88dp"
+                                            android:padding="5dp"
+                                            android:scaleType="fitXY"
+                                            android:background="@mipmap/ic_launcher" />
+
+                                        <ImageButton
+                                            android:id="@+id/imgFBAddMediaImg2"
+                                            android:layout_width="88dp"
+                                            android:layout_height="88dp"
+                                            android:padding="5dp"
+                                            android:scaleType="fitXY"
+                                            android:background="@mipmap/ic_mic"/>
+                                            -->
+                                        <!--
+                                                        <ImageButton
+                                                            android:id="@+id/imgFBAddMediaImg3"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_centerVertical="true"
+                                                            android:padding="5dp"
+                                                            android:scaleType="fitXY"
+                                                            android:src="@mipmap/ic_mic" />
+
+                                                        <ImageButton
+                                                            android:id="@+id/imgFBAddMediaImg4"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_centerVertical="true"
+                                                            android:padding="5dp"
+                                                            android:scaleType="fitXY"
+                                                            android:src="@mipmap/ic_mic" />
+
+                                                        <ImageButton
+                                                            android:id="@+id/imgFBAddMediaImg5"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_centerVertical="true"
+                                                            android:padding="5dp"
+                                                            android:scaleType="fitXY"
+                                                            android:src="@mipmap/ic_mic" />
+
+                                                        <ImageButton
+                                                            android:id="@+id/imgFBAddMediaImg6"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_centerVertical="true"
+                                                            android:padding="5dp"
+                                                            android:scaleType="fitXY"
+                                                            android:src="@mipmap/ic_mic" />
+
+                                                        <ImageButton
+                                                            android:id="@+id/imgFBAddMediaImg7"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_centerVertical="true"
+                                                            android:padding="5dp"
+                                                            android:scaleType="fitXY"
+                                                            android:src="@mipmap/ic_mic" />
+
+                                                        <ImageButton
+                                                            android:id="@+id/imgFBAddMediaImg8"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_centerVertical="true"
+                                                            android:padding="5dp"
+                                                            android:scaleType="fitXY"
+                                                            android:src="@mipmap/ic_mic" />
+                                        -->
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:id="@+id/rlFBAddMedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hSVFBAddMediaTray"
+                android:layout_marginBottom="10dp">
+
+
+                <TextView
+                    android:id="@+id/txtFBAddMediaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/fb_add_media_title"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/txtFBAddMoreMediaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtFBAddMediaTitle"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/fb_add_more_media_title"
+                    android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                    android:id="@+id/llFBAddMediaType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtFBAddMoreMediaTitle"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:weightSum="2">
+
+                    <ImageButton
+                        android:id="@+id/imgFBAddMediaTakeImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitXY"
+                        android:background="@mipmap/image_capture" />
+
+                    <ImageButton
+                        android:id="@+id/imgFBAddMediaUploadImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:scaleType="fitXY"
+                        android:background="@mipmap/media_upload"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtFBAddMediaSkip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llFBAddMediaType"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/skip"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/txtFBAddMoreMediaDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtFBAddMediaSkip"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/done"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlFBAddCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlFBAddMedia"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/txtFBCatTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/fb_cat_title"
+                    android:layout_centerHorizontal="true" />
+
+                <LinearLayout
+                    android:id="@+id/llFBCat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtFBCatTitle"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnFBBrands"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="@string/fb_cat_brand"
+                        android:textColor="#f8fdf9"
+                        android:background="@drawable/bg_button_semi_rounded"/>
+
+                    <Button
+                        android:id="@+id/btnFBSocial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="@string/fb_cat_social"
+                        android:textColor="#f8fdf9"
+                        android:background="@drawable/bg_button_semi_rounded"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/txtFBCatDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llFBCat"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/fb_cat_desc"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlFBAddBrandSocial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlFBAddCat"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llFBIndustry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_common"
+                    android:orientation="horizontal"
+                    android:padding="1dp"
+                    android:weightSum="100">
+
+                    <Spinner
+                        android:id="@+id/spFBIndustry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"/>
+
+                </LinearLayout>
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/actxtFBIndustry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llFBIndustry"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:hint="@string/select_industry"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/actxtFBBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/actxtFBIndustry"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:hint="@string/select_brand"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/actxtFBSocial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/actxtFBBrand"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:hint="@string/select_social"/>
+
+                <RelativeLayout
+                    android:id="@+id/llFBLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:weightSum="10"
+                    android:layout_below="@+id/actxtFBSocial">
+
+                    <EditText
+                        android:id="@+id/etxtFBLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:hint="@string/select_location"
+                        android:layout_toLeftOf="@+id/btnFBLocation" />
+
+                    <Button
+                        android:id="@+id/btnFBLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/user_profile_1_gps"
+                        android:onClick="fetchlocation"
+                        android:layout_alignBottom="@+id/etxtUserProfileLocation"
+                        android:layout_alignParentRight="true" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnFBSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llFBLocation"
+                    android:paddingLeft="60dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="60dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/submit"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#f8fdf9"
+                    android:background="@drawable/bg_button_semi_rounded"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlFBSuccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlFBAddBrandSocial"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp">
+
+
+                <ImageButton
+                    android:id="@+id/imgFBSuccess"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="40dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="center"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/success"/>
+
+                <TextView
+                    android:id="@+id/txtFBSuccessTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgFBSuccess"
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/fb_success_title"
+                    android:layout_centerHorizontal="true" />
+
+                <Button
+                    android:id="@+id/btnFBSuccessAddmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtFBSuccessTitle"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="40dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/add_more"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#f8fdf9"
+                    android:background="@drawable/bg_button_semi_rounded"/>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

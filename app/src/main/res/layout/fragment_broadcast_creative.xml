@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:scrollbars="none">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlBroadCreativeType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txtBroadCreativeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/broad_creative_title" />
+
+        <RadioGroup
+            android:id="@+id/rgBroadCreativeType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtBroadCreativeTitle"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rdbBroadCreativeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Text"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rdbBroadCreativeImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Image"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rdbBroadCreativeVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Video"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnBroadCreativeSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rgBroadCreativeType"
+            android:layout_centerHorizontal="true"
+            android:text="@string/next"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBroadCreativeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtBroadCreativeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/broad_creative_texttitle" />
+
+        <EditText
+            android:id="@+id/etxtBroadCreativeTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtBroadCreativeText"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:hint="@string/broad_creative_creativetitle" />
+
+        <EditText
+            android:id="@+id/etxtBroadCreativeTextDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxtBroadCreativeTextTitle"
+            android:layout_marginBottom="5dp"
+            android:minLines="6"
+            android:gravity="top|left"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:hint="@string/broad_creative_creativedesc" />
+
+        <LinearLayout
+            android:id="@+id/llBroadCreativeTextbtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/etxtBroadCreativeTextDesc"
+            android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnBroadCreativeTextBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:text="@string/back"/>
+
+        <Button
+            android:id="@+id/btnBroadCreativeTextSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:text="@string/save"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBroadCreativeImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtBroadCreativeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/broad_creative_imagetitle" />
+
+        <EditText
+            android:id="@+id/etxtBroadCreativeImageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtBroadCreativeImage"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:hint="@string/broad_creative_creativetitle" />
+
+        <EditText
+            android:id="@+id/etxtBroadCreativeImageDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxtBroadCreativeImageTitle"
+            android:layout_marginBottom="5dp"
+            android:minLines="6"
+            android:gravity="top|left"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:hint="@string/broad_creative_creativedesc" />
+
+        <LinearLayout
+            android:id="@+id/llBroadCreativeImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxtBroadCreativeImageDesc"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnBroadCreativeUploadImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:text="@string/broad_creative_imageupload"/>
+
+            <Button
+                android:id="@+id/btnBroadCreativeTakeImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:text="@string/broad_creative_imagetake"/>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imgBroadCreativeImage"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/llBroadCreativeImage"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/llBroadCreativeImagebtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/imgBroadCreativeImage"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnBroadCreativeImageBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:text="@string/back"/>
+
+            <Button
+                android:id="@+id/btnBroadCreativeImageSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:text="@string/save"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBroadCreativeVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtBroadCreativeVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/broad_creative_videotitle" />
+
+        <EditText
+            android:id="@+id/etxtBroadCreativeVideoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtBroadCreativeVideo"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:hint="@string/broad_creative_creativetitle" />
+
+        <EditText
+            android:id="@+id/etxtBroadCreativeVideoDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxtBroadCreativeVideoTitle"
+            android:layout_marginBottom="5dp"
+            android:minLines="6"
+            android:gravity="top|left"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:hint="@string/broad_creative_creativedesc" />
+
+        <Button
+            android:id="@+id/btnBroadCreativeVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etxtBroadCreativeVideoDesc"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/broad_creative_videoupload"/>
+
+        <VideoView
+            android:id="@+id/vidBroadCreativeVideo"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/btnBroadCreativeVideo"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/llBroadCreativeVideobtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/vidBroadCreativeVideo"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnBroadCreativeVideoBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:text="@string/back"/>
+
+            <Button
+                android:id="@+id/btnBroadCreativeVideoSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:text="@string/save"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</ScrollView>

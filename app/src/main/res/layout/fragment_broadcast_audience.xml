@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:scrollbars="none">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlBroadAud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="visible">
+
+    <TextView
+        android:id="@+id/txtBroadAudTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/broad_aud_title"/>
+
+    <TextView
+        android:id="@+id/txtBroadAudGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBroadAudTitle"
+        android:layout_marginBottom="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/gender"/>
+
+    <RadioGroup
+        android:id="@+id/rgBroadAudGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBroadAudGender"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rdbAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="All"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rdbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rdbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtBroadAudAgeGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgBroadAudGender"
+        android:layout_marginBottom="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/broad_aud_agegroup"/>
+
+    <RadioGroup
+        android:id="@+id/rgBroadAudAgeGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBroadAudAgeGrp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rdbAgeGrpAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="All"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rdbAgeGrpCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/llBroadAudAgeGrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgBroadAudAgeGrp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etxtBroadAudAgeFrom"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:inputType="number"
+            android:maxLength="3"
+            android:hint="@string/broad_aud_agefrom" />
+
+        <EditText
+            android:id="@+id/etxtBroadAudAgeTo"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:inputType="number"
+            android:maxLength="3"
+            android:hint="@string/broad_aud_ageto" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBroadAudLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llBroadAudAgeGrp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+    <TextView
+        android:id="@+id/txtBroadAudLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/location"/>
+
+    <Button
+        android:id="@+id/btnBroadAudAddNewLoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBroadAudLoc"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/broad_aud_addnewnloc"/>
+
+    <ListView
+        android:id="@+id/lvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnBroadAudAddNewLoc"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnBroadCampSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlBroadAudLocation"
+        android:layout_centerHorizontal="true"
+        android:text="@string/save"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBroadAudAddNewLoc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtBroadAudLocTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/broad_aud_addnewnloc"/>
+
+        <TextView
+            android:id="@+id/txtBroadAudLocCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtBroadAudLocTitle"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/broad_aud_loc_country"/>
+
+        <Spinner
+            android:id="@+id/spBroadAudLocCountry"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtBroadAudLocCountry"
+            android:layout_marginBottom="10dp"
+            android:prompt="@string/broad_aud_loc_spcountry"
+            android:spinnerMode="dropdown"
+            android:entries="@array/country_list"/>
+
+        <TextView
+            android:id="@+id/txtBroadAudLocState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spBroadAudLocCountry"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/broad_aud_loc_state"/>
+
+        <Spinner
+            android:id="@+id/spBroadAudLocState"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtBroadAudLocState"
+            android:layout_marginBottom="10dp"
+            android:prompt="@string/broad_aud_loc_spstate"
+            android:spinnerMode="dropdown"
+            android:entries="@array/state_list"/>
+
+        <TextView
+            android:id="@+id/txtBroadAudLocDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spBroadAudLocState"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/broad_aud_loc_district"/>
+
+        <Spinner
+            android:id="@+id/spBroadAudLocDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtBroadAudLocDistrict"
+            android:layout_marginBottom="10dp"
+            android:prompt="@string/broad_aud_loc_spdistrict"
+            android:spinnerMode="dropdown"
+            android:entries="@array/district_list"/>
+
+        <TextView
+            android:id="@+id/txtBroadAudLocCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spBroadAudLocDistrict"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/broad_aud_loc_city"/>
+
+        <Spinner
+            android:id="@+id/spBroadAudLocCity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtBroadAudLocCity"
+            android:layout_marginBottom="10dp"
+            android:prompt="@string/broad_aud_loc_spcity"
+            android:spinnerMode="dropdown"
+            android:entries="@array/city_list"/>
+
+        <TextView
+            android:id="@+id/txtBroadAudLocLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spBroadAudLocCity"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/broad_aud_loc_location"/>
+
+        <Spinner
+            android:id="@+id/spBroadAudLocLocation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtBroadAudLocLocation"
+            android:layout_marginBottom="10dp"
+            android:prompt="@string/broad_aud_loc_splocation"
+            android:spinnerMode="dropdown"
+            android:entries="@array/location_list"/>
+
+        <Button
+            android:id="@+id/btnBroadAudLocSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spBroadAudLocLocation"
+            android:layout_centerHorizontal="true"
+            android:text="@string/add"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</ScrollView>

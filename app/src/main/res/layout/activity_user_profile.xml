@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    >
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/rlUser_Profile"
+        android:visibility="visible"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rtyid"
+            android:visibility="visible"
+            >
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:id="@+id/scrollView"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/rlUser_Profile_1"
+                    android:visibility="visible"
+                    android:background="#ffffff"
+                    >
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        >
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@mipmap/profilepic"
+
+
+                            >
+                            <com.codeginger.frkout.RoundedImageView
+                                android:id="@+id/ivUserProfile"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:src="@mipmap/profileicon"
+                                android:scaleType="centerInside"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true" />
+
+                            <!-- <com.mikhaellopez.circularimageview.CircularImageView
+                                 android:layout_width="160dp"
+                                 android:layout_height="150dp"
+                                 android:src="@drawable/profileicon"
+                                 android:contextClickable="true"
+                                 android:onClick="profilepic"
+                                 android:foregroundGravity="center"
+                                 android:id="@+id/Image_view"
+                                 app:civ_border_color="#EEEEEE"
+                                 app:civ_border_width="4dp"
+                                 app:civ_shadow="true"
+                                 app:civ_shadow_radius="5"
+                                 app:civ_shadow_color="#8BC34A"
+                                 android:layout_centerVertical="true"
+                                 android:layout_centerHorizontal="true" />-->
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:padding="7dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="1dp"
+
+                            >
+
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginBottom="3dp"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:layout_width="100dp"
+                                    android:layout_height="50dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint=" Gender"
+                                        android:textSize="18dp"
+                                        android:textAlignment="textStart"
+                                        android:textColor="#9a9a9b"
+                                        android:gravity="center"
+                                        android:focusableInTouchMode="true"
+                                        android:typeface="normal"
+                                        tools:ignore="RtlCompat"
+
+                                        >
+
+                                    </TextView>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginRight="10dp"
+
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/btnUserProfileMale"
+                                        android:background="@mipmap/male"
+
+
+
+                                        />
+                                    <!-- <Button
+                                         android:id="@+id/btnUserProfileMale"
+                                         android:layout_width="45dp"
+                                         android:layout_height="wrap_content"
+                                         android:layout_centerHorizontal="true"
+                                         android:layout_alignParentBottom="true"
+                                         android:layout_marginBottom="0dip"
+
+                                         android:drawableTop="@mipmap/male"
+                                         android:background="@android:color/transparent"
+
+
+
+
+
+                                         />-->
+
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginRight="10dp"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/btnUserProfileFemale"
+                                        android:background="@mipmap/femalegrey"
+                                        />
+
+                                    <!-- <Button
+                                         android:id="@+id/btnUserProfileFemale"
+                                         android:layout_width="45dp"
+                                         android:layout_height="wrap_content"
+                                         android:drawableTop="@mipmap/female_grey"
+
+                                         android:layout_alignParentTop="true"
+                                         android:layout_alignParentRight="true"
+                                         android:layout_alignParentEnd="true"
+                                         android:background="?android:attr/selectableItemBackground"
+                                         />-->
+                                    <!--android:background="@drawable/round_button"-->
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    >
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@mipmap/othergrey"
+                                        android:id="@+id/btnUserProfileOther"
+                                        />
+                                    <!--   <Button
+                                           android:id="@+id/btnUserProfileOther"
+                                           android:layout_width="45dp"
+                                           android:layout_height="wrap_content"
+                                           android:layout_centerHorizontal="true"
+                                           android:layout_alignParentBottom="true"
+                                           android:layout_marginBottom="2dip"
+                                           android:background="?android:attr/selectableItemBackground"
+                                           android:drawableTop="@mipmap/other_grey"
+                                           android:layout_alignParentTop="true"
+                                           />-->
+
+
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="ther"
+                                    android:padding="2dp"
+                                    android:gravity="center_vertical"
+                                    android:textSize="20sp"
+                                    android:textColor="#FF9A9A9B"
+                                    android:visibility="visible"
+
+                                    />
+
+
+
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:background="#b8909091"
+
+                                />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+                                <EditText
+                                    android:layout_marginTop="5dp"
+                                    android:id="@+id/etxtUserProfileName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="@string/user_profile_1_name"
+                                    android:textAlignment="textStart"
+                                    android:gravity="center_vertical"
+                                    android:textColor="#9a9a9b"
+                                    tools:ignore="RtlCompat" />
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="52dp"
+                                        android:id="@+id/edtName"/>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="0dp">
+                                <EditText
+                                    android:layout_marginTop="5dp"
+                                    android:id="@+id/etxtUserProfileAge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:hint="@string/user_profile_1_age"
+                                    android:textAlignment="textStart"
+                                    android:gravity="center"
+                                    android:textColor="#9a9a9b"
+
+                                    tools:ignore="RtlCompat"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="0dp">
+                                <EditText
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/etxtUserProfileEmailID"
+                                    android:layout_height="match_parent"
+                                    android:hint="@string/user_profile_1_email_id"
+                                    android:inputType="textEmailAddress"
+                                    android:textAlignment="textStart"
+                                    android:gravity="center"
+                                    android:textColor="#9a9a9b"
+                                    tools:ignore="RtlCompat"
+                                    />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="3dp"
+                                android:orientation="horizontal">
+                                <EditText
+                                    android:layout_marginTop="5dp"
+                                    android:id="@+id/etxtUserProfileLocation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_weight="26"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:hint="@string/user_profile_1_location"
+                                    android:textAlignment="textStart"
+                                    android:textColor="#9a9a9b"
+                                    android:inputType="none"
+                                    tools:ignore="RtlCompat" />
+
+
+                                <Button
+                                    android:layout_width="45dp"
+
+                                    android:id="@+id/btnUserProfileLocation"
+                                    android:layout_height="40dp"
+                                    android:onClick="Setlocation"
+                                    android:background="@mipmap/getgps"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    />
+
+
+                                <!-- android:textColor="#ffffff"
+                                 android:background="#6b6f70"-->
+
+
+
+                                <!--   <ImageView
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+                                       android:src="@drawable/location"
+                                       android:onClick="img_Location_image"
+                                       />-->
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:orientation="vertical"
+                                android:visibility="invisible"
+
+                                >
+                                <CheckBox
+                                    android:id="@+id/chkUserProfileAgree"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/user_profile_1_iagree"
+                                    android:checked="true"
+                                    android:layout_alignParentLeft="true" />
+                                <TextView
+                                    android:id="@+id/txtUserProfileTos"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:padding="5dp"
+                                    android:textColor="@color/orange_light"
+                                    android:focusableInTouchMode="false"
+                                    android:clickable="true"
+                                    android:onClick="tos"
+                                    android:text="@string/user_profile_1_tos" />
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:visibility="invisible"
+                                    />
+                            </LinearLayout>
+
+
+
+
+
+                            <!--  <Button
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:background="@drawable/btn_corner"
+                                  android:text="CONTINUE"
+                                  android:onClick="UserProfileSubmit"
+                                  android:id="@+id/btnUserProfileSaveNext"
+                                  android:textColor="#ffffff"
+                                  android:typeface="normal"
+                                  android:textStyle="bold"
+                                  android:layout_marginTop="20dp"
+                                  android:layout_marginBottom="20dp"
+                                  />
+      -->
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+
+                >
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_corner"
+                    android:text="CONTINUE"
+                    android:textSize="20dp"
+                    android:onClick="UserProfileSubmit"
+                    android:id="@+id/btnUserProfileSaveNext"
+                    android:textColor="#ffffff"
+                    android:typeface="normal"
+                    android:textStyle="normal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignParentBottom="true"
+
+
+                    />
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlUser_Profile_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/txtUserProfile2Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/user_profile_2_title"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtUserProfile2Title"
+            android:id="@+id/list_view"
+            android:layout_marginTop="10dp"
+            >
+
+        </ListView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_view"
+            >
+            <Button
+
+                android:id="@+id/btnUserProfile2Done"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/user_profile_2_done"
+                android:onClick="UserProfileDone"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="30dp"
+                android:textColor="#f8fdf9"
+                android:background="@drawable/bg_button_semi_rounded"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</LinearLayout>

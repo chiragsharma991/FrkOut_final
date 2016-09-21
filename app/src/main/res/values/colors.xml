@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Common -->
+    <color name="actionbar">#3399cc</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="gray">#7E7E7E</color>
+    <color name="bg_gradient_start">#3990CA</color>
+    <color name="bg_gradient_end">#15547E</color>
+    <color name="bg_button_login">#1D394C</color>
+    <color name="frame">#b4b4b4</color>
+    <color name="frame_solid">#eee</color>
+    <color name="frame_background">#bcbcbc</color>
+
+    <color name="orange_dark">#f27249</color>
+    <color name="orange_light">#f4764a</color>
+    <color name="orange_very_light">#f29d34</color>
+
+    <color name="grey_light">#b0afb0</color>
+    <color name="red_light">#f05353</color>
+    <color name="red_dark">#ef464c</color>
+    <color name="green_lightf">#40cf04</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="title">#222222</color>
+
+    <!-- OTP Page -->
+    <color name="white_dark">#e9f6fc</color>
+    <color name="white_light">#e9f7fc</color>
+    <color name="green_dark">#2c8477</color>
+    <color name="green_light">#2b8477</color>
+
+    <!-- Feedback Comment -->
+    <color name="black_dark">#1d1d1d</color>
+    <color name="black_light">#9d9d9d</color>
+    <color name="black_very_light">#dfdfdf</color>
+
+
+
+    <!-- Dashboard -->
+    <color name="brand_colour">#f27249</color>
+    <color name="genre">#666666</color>
+    <color name="year">#888888</color>
+    <!--<color name="list_divider">#d9d9d9</color>-->
+    <color name="list_divider">#ffffff</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+    <color name="dash_yesno_bg">#FEF8BC</color>
+
+
+    <!-- Floating Button -->
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+
+    <!--Chatting -->
+    <color name="chat_element_background">#E3FFCA</color>
+    <color name="chat_fromtext">#A901DB</color>
+    <color name="chat_totext">#0B0719</color>
+
+
+</resources>

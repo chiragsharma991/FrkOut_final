@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/mainbg">
+
+
+
+    <!-- <ScrollView android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scrollbars="none">-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rlOTPFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/linearLayout2"
+                android:background="@mipmap/frkoutmainlogo"
+                android:gravity="center"
+
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+
+
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rlMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/linearLayout2">
+
+                <RelativeLayout
+                    android:id="@+id/rlMobileInner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rlRequest_OTP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_marginTop="1dp"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/llMobile_No"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+
+
+
+                            >
+
+                            <ImageView
+                                android:id="@+id/ivOTPMobile"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:scaleType="center"
+                                android:background="@mipmap/mobile"
+                                android:gravity="center"
+                                android:visibility="gone"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/txtOTPCountryCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/country_code"
+                                android:textColor="@color/white_dark"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                />
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/green_dark"
+                                android:visibility="gone"
+
+                                />
+
+                            <EditText
+                                android:id="@+id/etxtMobile_No"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/mobile_no"
+                                android:textColorHint="#646464"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:padding="10dp"
+                                android:textSize="7pt"
+                                android:backgroundTint="#a2a09b"
+
+                                />
+
+                        </LinearLayout>
+
+
+
+
+                        <Button
+                            android:id="@+id/btnRequest_OTP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llMobile_No"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="40dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="#383535"
+                            android:background="@drawable/bg_button_semi_rounded"
+                            android:text="@string/request_for_OTP"
+                            android:onClick="OTPRequest"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSubmit_OTP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_marginTop="0dp"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/llMobile_No"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ivOTPMobile"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:scaleType="center"
+                                android:background="@mipmap/mobile"
+                                android:gravity="center"
+                                android:visibility="invisible"
+                                />
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/green_dark"
+                                android:visibility="invisible"
+                                />
+
+                            <EditText
+                                android:id="@+id/etxtOTP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/OTP"
+                                android:textColorHint="#646464"
+                                android:inputType="number"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:backgroundTint="#a2a09b"
+                                android:layout_marginRight="43dp"
+
+                                />
+
+                        </LinearLayout>
+
+
+
+
+
+                        <Button
+                            android:id="@+id/btnSubmit_OTP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llMobile_No"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="40dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="#383535"
+                            android:background="@drawable/bg_button_semi_rounded"
+                            android:text="@string/login_button"
+                            android:onClick="OTPSubmit" />
+                        <!-- <Button
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Resend OTP"
+                             android:textColor="#383535"
+                             android:layout_alignTop="@+id/btnSubmit_OTP"
+                             android:layout_alignParentRight="true"
+                             android:layout_alignParentEnd="true" />-->
+
+                        <TextView
+                            android:id="@+id/txtResendOTP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/resend_otp"
+                            android:textColor="#8e8888"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignRight="@+id/btnSubmit_OTP"
+                            android:layout_alignEnd="@+id/btnSubmit_OTP" />
+
+                        <TextView
+                            android:id="@+id/txtResendOTPTesting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/resend_otp"
+                            android:textColor="#f8fdf9"
+                            android:gravity="center"
+                            android:visibility="invisible"
+                            android:layout_above="@+id/llMobile_No"
+                            android:layout_centerHorizontal="true" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtSignIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlMobileInner"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_centerInParent="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/sign_in"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:textColor="#383535"
+                    android:visibility="visible"
+                    />
+
+
+                <!--  <LinearLayout
+                      android:id="@+id/llSocialSignInData"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@+id/txtSignIn"
+                      android:orientation="horizontal"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginTop="100dp"
+                      android:visibility="visible"
+
+
+
+                      >
+
+                      <ImageView
+                          android:id="@+id/ivFbLogin"
+                          android:layout_width="50dp"
+                          android:layout_height="50dp"
+                          android:layout_centerInParent="true"
+                          android:onClick="loginToFacebook"
+                          android:text="@string/facebook"
+                          android:gravity="center"
+                          android:scaleType="center"
+                          android:background="@mipmap/facebook1" />
+
+                      <View
+                          android:layout_width="2dp"
+                          android:layout_height="40dp"
+                          android:layout_marginLeft="5dp"
+                          android:layout_marginRight="5dp"
+                          android:background="@color/green_light"
+                          android:visibility="invisible"
+                          />
+
+                      <ImageView
+                          android:id="@+id/ivSign_in"
+                          android:layout_width="50dp"
+                          android:layout_height="50dp"
+                          android:layout_centerInParent="true"
+                          android:onClick="signInWithGplus"
+                          android:text="@string/google"
+                          android:gravity="center"
+                          android:scaleType="center"
+                          android:background="@mipmap/google1" />
+
+                      <View
+                          android:layout_width="2dp"
+                          android:layout_height="40dp"
+                          android:layout_marginLeft="5dp"
+                          android:layout_marginRight="5dp"
+                          android:background="@color/green_light"
+                          android:visibility="invisible"
+                          />
+
+                      <ImageView
+                          android:id="@+id/ivLoginTwitter"
+                          android:layout_width="50dp"
+                          android:layout_height="50dp"
+                          android:layout_centerInParent="true"
+                          android:onClick="loginToTwitter"
+                          android:text="@string/twitter"
+                          android:gravity="center"
+                          android:scaleType="center"
+                          android:background="@mipmap/twitt" />
+
+                  </LinearLayout>
+-->
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llSocialSignInData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp"
+        android:visibility="visible"
+
+
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/ivFbLogin"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:onClick="loginToFacebook"
+            android:text="@string/facebook"
+            android:gravity="center"
+            android:scaleType="center"
+            android:background="@mipmap/fblogin" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/green_light"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/ivSign_in"
+            android:layout_width="44dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:onClick="signInWithGplus"
+            android:text="@string/google"
+            android:gravity="center"
+            android:scaleType="center"
+            android:background="@mipmap/gpluslogin" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/green_light"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/ivLoginTwitter"
+            android:layout_width="38dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:text="@string/twitter"
+            android:gravity="center"
+            android:scaleType="center"
+            android:background="@mipmap/twitterlogin" />
+
+    </LinearLayout>
+    <!--  </ScrollView>-->
+
+    <!-- <LinearLayout
+         android:id="@+id/llSocialSignInData"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:visibility="visible"
+
+
+         android:layout_alignParentBottom="true"
+         android:layout_centerHorizontal="true">
+
+         <ImageView
+             android:id="@+id/ivFbLogin"
+             android:layout_width="35dp"
+             android:layout_height="35dp"
+             android:layout_centerInParent="true"
+             android:onClick="loginToFacebook"
+             android:text="@string/facebook"
+             android:gravity="center"
+             android:scaleType="center"
+             android:background="@mipmap/fblogin" />
+
+         <View
+             android:layout_width="2dp"
+             android:layout_height="35dp"
+             android:layout_marginLeft="5dp"
+             android:layout_marginRight="5dp"
+             android:background="@color/green_light"
+             android:visibility="invisible"
+             />
+
+         <ImageView
+             android:id="@+id/ivSign_in"
+             android:layout_width="35dp"
+             android:layout_height="35dp"
+             android:layout_centerInParent="true"
+             android:onClick="signInWithGplus"
+             android:text="@string/google"
+             android:gravity="center"
+             android:scaleType="center"
+             android:background="@mipmap/gpluslogin" />
+
+         <View
+             android:layout_width="2dp"
+             android:layout_height="35dp"
+             android:layout_marginLeft="5dp"
+             android:layout_marginRight="5dp"
+             android:background="@color/green_light"
+             android:visibility="invisible"
+             />
+
+         <ImageView
+             android:id="@+id/ivLoginTwitter"
+             android:layout_width="35dp"
+             android:layout_height="35dp"
+             android:layout_centerInParent="true"
+             android:onClick="loginToTwitter"
+             android:text="@string/twitter"
+             android:gravity="center"
+             android:scaleType="center"
+             android:background="@mipmap/twitterlogin" />
+
+     </LinearLayout>-->
+
+</RelativeLayout>

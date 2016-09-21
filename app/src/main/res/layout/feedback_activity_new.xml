@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="2"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/liearFistFeedback"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/txtFBTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="hh:mm"
+                    android:textSize="18dp"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout3"
+                android:id="@+id/linearLayout4"
+                >
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/etxtFBDesc1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine|textAutoComplete"
+                        android:minLines="6"
+                        android:maxLines="6"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:hint="@string/fb_desc_hint"
+                        android:background="@drawable/border_common"
+                        android:visibility="visible"
+                        android:layout_below="@+id/linearLayout3"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout4"
+                android:id="@+id/linearLayout5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:paddingBottom="15dp"
+                        android:paddingStart="60dp"
+                        android:paddingRight="60dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="60dp"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/imgFeedback"
+                        android:paddingLeft="60dp" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout5"
+                android:id="@+id/linearLayout6"
+                android:weightSum="1">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageButton
+                        android:id="@+id/TakeMediaImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/cameraicon"
+                        android:padding="5dp"
+                        android:scaleType="center"
+                        android:clickable="true"
+                        android:onClick="SetfeedbackPic"
+                        />
+
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout6"
+                android:layout_marginTop="5dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Say More Using Picture/Video"
+                    android:id="@+id/txtCamera"
+                    android:gravity="center"
+                    android:layout_below="@+id/linearLayout5"
+                    android:layout_centerHorizontal="true" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+       <!-- <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >-->
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CONTINUE"
+                android:id="@+id/btnFeedbackSubmit"
+                android:textColor="#ffffff"
+                android:onClick="SubmitFeedback"
+                android:background="@drawable/btn_corner"
+                android:padding="4dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20dp"
+                android:layout_marginBottom="2dp"
+                android:layout_alignParentBottom="true"
+
+
+
+                />
+       <!-- </RelativeLayout>
+-->
+    </LinearLayout>
+
+
+    <!-- <<<<<<<<For the Feedback sencond Activity>>>>>>>>
+      -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearFeedbackSubmit"
+        android:visibility="gone"
+        >
+
+
+
+        <RelativeLayout
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relativeLayout"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Thank you for sharing your experience,\n you are one step away from submiting\n your eperience to the world "
+                        android:id="@+id/textView2"
+                        android:textSize="7pt"
+
+
+                        android:layout_marginTop="20dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/relativeLayout"
+                    android:paddingBottom="6dp"
+                    android:background="#ffffff"
+                    android:id="@+id/Relayout_Submit"
+                    android:orientation="vertical">
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/relativeLayoutBrands"
+                        android:visibility="visible"
+
+                        >
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select Company/Brand"
+                            android:id="@+id/btnSelectCompany"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="#ffffff"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:textStyle="normal"
+                            android:textColor="#252525" />
+
+                    </RelativeLayout>
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayoutBrands"
+                        android:id="@+id/relativeLayoutin2"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:id="@+id/editText"
+                            android:gravity="center"
+                            android:text="---------------------  OR  ---------------------"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true" />
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/relativeLayoutSocial"
+                        android:layout_below="@+id/relativeLayoutin2"
+                        android:visibility="visible"
+
+                        >
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select Social"
+                            android:id="@+id/buttonSocial"
+                            android:layout_centerHorizontal="true"
+                            android:background="#ffffff"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:textStyle="normal"
+                            android:textColor="#252525" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_below="@+id/relativeLayoutSocial"
+                        android:layout_marginTop="4dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            >
+
+                            <EditText
+                                android:layout_width="265dp"
+                                android:layout_height="50dp"
+                                android:hint="Experience Location"
+                                android:id="@+id/editExperienceLocation"
+                                android:layout_weight="2"
+                                android:padding="10dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+
+                            >
+
+                            <Button
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:id="@+id/buttongps"
+                                android:layout_gravity="right"
+                                android:layout_weight="0.04"
+                                android:onClick="fetchlocation"
+                                android:background="@mipmap/getgps"
+                                android:padding="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:id="@+id/buttonsubmit"
+                android:background="@drawable/btn_corner"
+                android:layout_marginTop="5dp"
+                android:onClick="FeedBackSubmitActivity"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_marginBottom="14dp"
+                android:layout_alignParentBottom="true"
+
+
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+
+    <!-- <<<<<<<<For the list view Activity >>>>>>>>
+    -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/feedback_listview"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ListViewOnSelect"
+                >
+
+
+
+
+            </ListView>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="OK"
+            android:id="@+id/btnsubmitoksocialbrands"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:background="#40cf04"
+
+
+            />
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <!--  <<<<<< For submittig the feedback Activity>>>>>>-->
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayoutForFeebBackSuceess"
+        android:visibility="gone"
+        android:layout_marginTop="100dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/RlySucess1"
+            >
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="10dp"
+                android:scaleType="center"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/success"
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/RlySucess2"
+            android:layout_below="@+id/RlySucess1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtFBSuccessTitle"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:text="@string/fb_success_title"
+                android:layout_centerHorizontal="true"
+                />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAddmore"
+            android:layout_below="@+id/RlySucess2"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_corner"
+                android:text="Add More"
+                android:id="@+id/FbBtnAddmore"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:scaleType="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
